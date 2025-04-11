@@ -1,23 +1,85 @@
-# Project Analyzer
+# Hey there! Welcome to Project Analyzer
 
-Welcome to **Project Analyzer**, a tool I originally built to help speed up the learning curve on new projects and programs.
+So I built this cool little tool to help me get up to speed faster when diving into new codebases. Thought you might find it useful too!
 
-## 🚀 Features
+## What can it do?
 
-- **Directory Analysis**: Analyze your project's files and directories using the Directory Picker API or file input.
-- **Search Functionality**: Quickly search for variables, functions, imports, and exports across your project.
-- **Critical File Detection**: Identify important files like configuration files, entry points, and files with high dependencies.
-- **Project Overview**: Get insights into the total number of files, average lines of code, and largest files in your project.
-- **Progress Tracking**: Real-time progress updates during file scanning and analysis.
-- **Beautiful UI**: Built with Tailwind CSS and Lucide React icons for a clean and modern interface.
+- **Check out your project structure** - Just pick a directory or upload some files
+- **Find stuff super quick** - Search for variables, functions, imports, whatever you need
+- **Spot the important files** - Config files, entry points, and heavily-used stuff
+- **Get the big picture** - See how many files you've got, average code size, and the chonky files
+- **Track progress in real-time** - Watch as it scans through everything
+- **Look good doing it** - Clean UI with Tailwind and those nice Lucide icons
 
-## 🛠️ How It Works
+## Using it is pretty straightforward
 
-1. **Analyze Your Project**: Click the "Analyze Project" button to start analyzing your project. You can either select a directory using the Directory Picker API or upload files manually.
-2. **View Results**: Once the analysis is complete, you'll see an overview of your project, including critical files, project structure, and largest files.
-3. **Search Your Code**: Use the search bar to find specific variables, functions, imports, or exports in your project.
-4. **Open in VS Code**: Open multiple files directly in VS Code for further exploration.
+1. Hit the "Analyze Project" button
+2. Pick a directory or upload some files 
+3. Check out all the cool stats and insights
+4. Use the search bar to find specific code bits
+5. Open interesting files right in VS Code if you want a closer look
 
-## 📂 File Structure
+## How it's organized
 
-Here's a quick look at the app's file structure:
+Here's the simple breakdown:
+
+```
+src/
+├── components/       # All the UI bits and pieces
+├── workers/          # Background processing stuff
+├── types/            # TypeScript definitions 
+├── App.tsx           # The main app
+├── main.tsx          # Where it all starts
+├── index.css         # Makes it look pretty
+```
+
+## Tech I used
+
+Just the good stuff:
+- React for the UI
+- TypeScript to keep things tidy
+- Vite because it's super fast
+- Tailwind CSS for styling without the headache
+- Lucide React for those sweet icons
+
+## Getting it running
+
+1. Grab the code:
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
+   ```
+
+2. Install the goodies:
+   ```bash
+   npm install
+   ```
+
+3. Fire it up:
+   ```bash
+   npm run dev
+   ```
+
+4. Head to `http://localhost:5173` and you're good to go!
+
+## Handy commands
+
+- `npm run dev` - Start it up for development
+- `npm run build` - Package it for production
+- `npm run preview` - Check out the production build
+- `npm run lint` - Make sure your code isn't messy
+
+## Questions?
+
+**What browsers work with this?**
+Modern ones! Chrome, Edge, Firefox should all be fine. Old browsers might struggle with the Directory Picker.
+
+**How many files can it handle?**
+About 1,000 before things get sluggish. Skip the `node_modules` and build folders if your project is huge.
+
+**Can I customize what folders to ignore?**
+For sure! Just tweak the `DEFAULT_EXCLUDE_PATTERNS` in `src/types/analyzer.ts`.
+
+## License
+
+It's MIT licensed - so do whatever you want with it! Enjoy!
